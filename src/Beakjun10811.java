@@ -9,19 +9,25 @@ public class Beakjun10811 {
 
         int[] arr = new int[N+1];
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = 0; i <= N; i++) {
            arr[i] = i+1;
         }
 
-        for (int i=1; i < M; i++) {
+        for (int i=0; i < M; i++) {
+        int I=sc.nextInt()-1; //0번째 배열
+        int J=sc.nextInt()-1; //4번쨰 배열
 
-
-        }
-
-        for(int i=0;i<N;i++){
-            System.out.println(arr[i]+" ");
+            while(I<J) {
+                int temp = arr[I];
+                arr[I++] = arr[J];
+                arr[J--] = temp;
+            }
         }
         sc.close();
+        for(int i=0;i<N;i++){
+            System.out.print(arr[i]+" ");
+        }
+
 
 
     }
